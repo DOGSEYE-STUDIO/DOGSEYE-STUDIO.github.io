@@ -596,6 +596,8 @@ em { font-style: italic; }
 .social-grid li:nth-child(3) .social-icon { background: var(--magenta); }
 .social-grid li:nth-child(4) .social-icon { background: var(--purple-light); }
 .social-grid li:nth-child(5) .social-icon { background: var(--paper-2); }
+.social-grid li:nth-child(6) .social-icon { background: var(--ink); color: #fff; }
+.social-grid li:nth-child(6) .social-card:hover .social-icon { background: var(--magenta); color: var(--ink); }
 .social-card:hover .social-icon { background: var(--ink); color: #fff; }
 .social-icon .icon { width: 22px; height: 22px; }
 .social-text { display: flex; flex-direction: column; min-width: 0; }
