@@ -27,6 +27,28 @@
       }
     });
 
+    // Language switch EN/ES
+    var langBtn = document.querySelector('.lang-toggle');
+    var items = document.querySelectorAll('[data-es]');
+    Array.prototype.forEach.call(items, function (el) { el.setAttribute('data-en', el.innerHTML); });
+    var titles = { en: document.title, es: 'Dogseye Studio · Estudio indie de videojuegos en Madrid' };
+    function setLang(lang) {
+      root.lang = lang;
+      document.title = titles[lang];
+      Array.prototype.forEach.call(items, function (el) {
+        el.innerHTML = el.getAttribute(lang === 'es' ? 'data-es' : 'data-en');
+      });
+      langBtn.setAttribute('data-lang', lang);
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+    langBtn.addEventListener('click', function () {
+      setLang(root.lang === 'es' ? 'en' : 'es');
+    });
+    var saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    langBtn.setAttribute('data-lang', 'en');
+    if (saved === 'es') setLang('es');
+
     // Header border once the page scrolls
     function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 8); }
     onScroll();
@@ -49,7 +71,7 @@
     Array.prototype.forEach.call(sections, function (s) { spy.observe(s); });
 
     // Gentle reveal on scroll (disabled by CSS for reduced motion)
-    var targets = document.querySelectorAll('.about-inner, .game-head, .story, .pillars, .socials .container, .contact-card');
+    var targets = document.querySelectorAll('.about-inner, .team-card, .goal-card, .devlog-entry, .edition-card, .game-head, .story, .pillars, .socials .container, .contact-card');
     var reveal = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -64,6 +86,18 @@
     });
   });
 
+  // Contact form: opens the user's email client with the message filled in
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var d = new FormData(form);
+      var body = d.get('message') + '\n\n' + d.get('name') + ' (' + d.get('email') + ')';
+      location.href = 'mailto:dogseye.studio@gmail.com?subject=' + encodeURIComponent('Contact from ' + d.get('name')) + '&body=' + encodeURIComponent(body);
+    });
+  });
+
   // Copy-email button (only shown when the Clipboard API is available)
   document.addEventListener('DOMContentLoaded', function () {
     var btn = document.querySelector('.copy-btn');
@@ -72,9 +106,9 @@
     btn.hidden = false;
     btn.addEventListener('click', function () {
       navigator.clipboard.writeText(btn.getAttribute('data-copy')).then(function () {
-        status.textContent = 'Email copied to clipboard!';
+        status.textContent = root.lang === 'es' ? '¡Email copiado!' : 'Email copied to clipboard!';
       }, function () {
-        status.textContent = 'Could not copy. The address is dogseye.studio@gmail.com';
+        status.textContent = (root.lang === 'es' ? 'No se pudo copiar. La dirección es ' : 'Could not copy. The address is ') + 'dogseye.studio@gmail.com';
       });
       setTimeout(function () { status.textContent = ''; }, 4000);
     });

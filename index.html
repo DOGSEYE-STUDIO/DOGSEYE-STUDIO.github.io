@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Silkscreen&display=swap">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=3">
   <link rel="preload" as="image" href="assets/img/logo-full-480.png" imagesrcset="assets/img/logo-full-480.png 480w, assets/img/logo-full.png 720w" imagesizes="(min-width: 960px) 420px, 72vw">
 
   <script type="application/ld+json">
@@ -55,7 +55,7 @@
     ]
   }
   </script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=3" defer></script>
 </head>
 <body>
   <!-- Icon sprite: brand icons from Simple Icons (CC0); pixel icons drawn for this site -->
@@ -76,7 +76,7 @@
     <symbol id="px-disc" viewBox="0 -1 10 10"><path d="M3 1h4v1h-4zM1 2h8v1h-8zM0 3h2v1h-2zM4 3h2v1h-2zM8 3h2v1h-2zM0 4h10v1h-10zM1 5h8v1h-8zM3 6h4v1h-4z"/></symbol>
   </svg>
 
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-es="Saltar al contenido">Skip to content</a>
 
   <header class="site-header" id="top">
     <div class="container header-inner">
@@ -85,19 +85,24 @@
         <span class="brand-name">Dogseye <span>Studio</span></span>
       </a>
 
+      <button class="lang-toggle" type="button" aria-label="Change language / Cambiar idioma"><span data-l="en">EN</span><span data-l="es">ES</span></button>
+
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="nav-toggle-bars" aria-hidden="true"></span>
-        <span class="visually-hidden">Menu</span>
+        <span class="visually-hidden" data-es="Menú">Menu</span>
       </button>
 
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#game">Our Game</a></li>
-          <li><a href="#socials">Socials</a></li>
+          <li><a href="#about" data-es="Nosotros">About</a></li>
+          <li><a href="#game" data-es="Juego">Game</a></li>
+          <li><a href="#team" data-es="Equipo">Team</a></li>
+          <li><a href="#goals" data-es="Objetivos">Goals</a></li>
+          <li><a href="#devlog" data-es="Devlog">Devlog</a></li>
+          <li><a href="#edition" data-es="Edición">Edition</a></li>
+          <li><a href="#socials" data-es="Redes">Socials</a></li>
         </ul>
-        <a class="btn btn-small btn-ink" href="#contact">Contact</a>
+        <a class="btn btn-small btn-ink" href="#contact" data-es="Contacto">Contact</a>
       </nav>
     </div>
   </header>
@@ -107,18 +112,16 @@
     <section class="hero" id="home" aria-labelledby="hero-title">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Indie game studio · Madrid, Spain</p>
-          <h1 id="hero-title">Creating the next <span class="hl">action RPG</span>, one pixel at a time.</h1>
-          <p class="hero-lead">We're Dogseye Studio, a small team building a 2D top-down adventure full of exploration, dungeons, combat and puzzles, set in a world that runs on music.</p>
+          <p class="eyebrow" data-es="Estudio indie de videojuegos · Madrid, España">Indie game studio · Madrid, Spain</p>
+          <h1 id="hero-title" data-es="Creando el próximo <span class='hl'>RPG de acción</span>, píxel a píxel.">Creating the next <span class="hl">action RPG</span>, one pixel at a time.</h1>
+          <p class="hero-lead" data-es="Somos Dogseye Studio, un pequeño equipo que desarrolla una aventura 2D con vista cenital llena de exploración, mazmorras, combate y puzles, ambientada en un mundo que funciona con música.">We're Dogseye Studio, a small team building a 2D top-down adventure full of exploration, dungeons, combat and puzzles, set in a world that runs on music.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://dogseye-studio.itch.io" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" aria-hidden="true"><use href="#i-itch"/></svg>
-              Visit our itch.io
-            </a>
-            <a class="btn btn-secondary" href="#game">Discover our game</a>
+              <svg class="icon" aria-hidden="true"><use href="#i-itch"/></svg><span data-es="Visita nuestro itch.io">Visit our itch.io</span></a>
+            <a class="btn btn-secondary" href="#game" data-es="Descubre nuestro juego">Discover our game</a>
           </div>
           <div class="hero-follow">
-            <span class="hero-follow-label">Follow our journey</span>
+            <span class="hero-follow-label" data-es="Sigue nuestro camino">Follow our journey</span>
             <ul class="icon-row" aria-label="Dogseye Studio on social media">
               <li><a href="https://x.com/dogseyestudio" target="_blank" rel="noopener noreferrer" aria-label="Dogseye Studio on X"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a></li>
               <li><a href="https://www.youtube.com/channel/UC6MDnQ15pli9vptjle8QFng" target="_blank" rel="noopener noreferrer" aria-label="Dogseye Studio on YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
@@ -148,14 +151,14 @@
     <section class="section about" id="about" aria-labelledby="about-title">
       <div class="container about-inner">
         <div class="about-copy">
-          <p class="eyebrow">About us</p>
-          <h2 id="about-title">Six students, one big adventure</h2>
-          <p>Dogseye Studio is an indie game studio based in Madrid, made up of six university students who love video games. We're developing an action RPG as our fourth-year university project, and sharing the journey with everyone who wants to follow along.</p>
+          <p class="eyebrow" data-es="Sobre nosotros">About us</p>
+          <h2 id="about-title" data-es="Seis estudiantes, una gran aventura">Six students, one big adventure</h2>
+          <p data-es="Dogseye Studio es un estudio indie de videojuegos con sede en Madrid, formado por seis estudiantes universitarios apasionados de los videojuegos. Estamos desarrollando un RPG de acción como proyecto de cuarto curso y compartimos el camino con todo el que quiera seguirnos.">Dogseye Studio is an indie game studio based in Madrid, made up of six university students who love video games. We're developing an action RPG as our fourth-year university project, and sharing the journey with everyone who wants to follow along.</p>
         </div>
         <ul class="facts">
-          <li class="fact fact-a"><strong>6</strong><span>people on the team</span></li>
-          <li class="fact fact-b"><strong>Madrid</strong><span>Spain is home</span></li>
-          <li class="fact fact-c"><strong>1</strong><span>action RPG in development</span></li>
+          <li class="fact fact-a"><strong>6</strong><span data-es="personas en el equipo">people on the team</span></li>
+          <li class="fact fact-b"><strong>Madrid</strong><span data-es="España es nuestro hogar">Spain is home</span></li>
+          <li class="fact fact-c"><strong>1</strong><span data-es="RPG de acción en desarrollo">action RPG in development</span></li>
         </ul>
       </div>
     </section>
@@ -164,23 +167,23 @@
     <section class="section game" id="game" aria-labelledby="game-title">
       <div class="container">
         <div class="game-head">
-          <p class="eyebrow eyebrow-dark"><span class="badge">In development</span> Our game</p>
-          <h2 id="game-title">A world that runs on music</h2>
-          <p class="game-lead">Our current project is a 2D top-down action RPG focused on exploration, dungeon crawling, combat and puzzles. It draws inspiration from the classic <em>The Legend of Zelda</em> games and the way they blend adventure, combat and environmental puzzle-solving.</p>
+          <p class="eyebrow eyebrow-dark" data-es="<span class='badge'>En desarrollo</span> Nuestro juego"><span class="badge">In development</span> Our game</p>
+          <h2 id="game-title" data-es="Un mundo que funciona con música">A world that runs on music</h2>
+          <p class="game-lead" data-es="Nuestro proyecto actual es un RPG de acción 2D con vista cenital centrado en la exploración, las mazmorras, el combate y los puzles. Se inspira en los clásicos <em>The Legend of Zelda</em> y en cómo combinan aventura, combate y puzles basados en el entorno.">Our current project is a 2D top-down action RPG focused on exploration, dungeon crawling, combat and puzzles. It draws inspiration from the classic <em>The Legend of Zelda</em> games and the way they blend adventure, combat and environmental puzzle-solving.</p>
         </div>
 
         <div class="story">
           <article class="textbox">
             <h3 class="textbox-tag">Orquesta</h3>
-            <p>The game is set in Orquesta, a world whose people are divided into factions based on families of musical instruments. Music generates an essence that sustains most of its inhabitants. Over time, political manipulation, censorship, inequality and the persecution of certain groups have transformed its society.</p>
+            <p data-es="El juego transcurre en Orquesta, un mundo cuya gente se divide en facciones basadas en familias de instrumentos musicales. La música genera una esencia que sustenta a la mayoría de sus habitantes. Con el tiempo, la manipulación política, la censura, la desigualdad y la persecución de ciertos grupos han transformado su sociedad.">The game is set in Orquesta, a world whose people are divided into factions based on families of musical instruments. Music generates an essence that sustains most of its inhabitants. Over time, political manipulation, censorship, inequality and the persecution of certain groups have transformed its society.</p>
             <div class="factions">
-              <p class="factions-label">Instrument families include</p>
+              <p class="factions-label" data-es="Las familias de instrumentos incluyen">Instrument families include</p>
               <ul>
-                <li>Wind</li>
-                <li>Strings</li>
-                <li>Percussion</li>
-                <li>Conductors</li>
-                <li>Electronic</li>
+                <li data-es="Viento">Wind</li>
+                <li data-es="Cuerda">Strings</li>
+                <li data-es="Percusión">Percussion</li>
+                <li data-es="Directores">Conductors</li>
+                <li data-es="Electrónica">Electronic</li>
               </ul>
             </div>
             <span class="textbox-caret" aria-hidden="true"></span>
@@ -188,38 +191,177 @@
 
           <article class="textbox textbox-hero">
             <h3 class="textbox-tag">Tamboril</h3>
-            <p>Our protagonist is a young member of the percussion faction. After attacks by mysterious mutant creatures, he sets out on an adventure to discover the truth behind the legendary conductors and the history of his world.</p>
+            <p data-es="Nuestro protagonista es un joven miembro de la facción de percusión. Tras los ataques de misteriosas criaturas mutantes, se embarca en una aventura para descubrir la verdad sobre los legendarios directores y la historia de su mundo.">Our protagonist is a young member of the percussion faction. After attacks by mysterious mutant creatures, he sets out on an adventure to discover the truth behind the legendary conductors and the history of his world.</p>
             <span class="textbox-caret" aria-hidden="true"></span>
           </article>
         </div>
 
-        <h3 class="pillars-title">What we're designing</h3>
+        <h3 class="pillars-title" data-es="Qué estamos diseñando">What we're designing</h3>
         <ul class="pillars">
           <li class="pillar">
             <svg class="pillar-icon" aria-hidden="true"><use href="#px-explore"/></svg>
-            <h4>Explore</h4>
-            <p>Move freely through a top-down world and interact with characters, objects, signs and mechanisms.</p>
+            <h4 data-es="Explora">Explore</h4>
+            <p data-es="Muévete libremente por un mundo cenital e interactúa con personajes, objetos, carteles y mecanismos.">Move freely through a top-down world and interact with characters, objects, signs and mechanisms.</p>
           </li>
           <li class="pillar">
             <svg class="pillar-icon" aria-hidden="true"><use href="#px-sword"/></svg>
-            <h4>Fight</h4>
-            <p>Face enemies with different behavior patterns, armed with a basic melee attack.</p>
+            <h4 data-es="Lucha">Fight</h4>
+            <p data-es="Enfréntate a enemigos con distintos patrones de comportamiento, armado con un ataque cuerpo a cuerpo básico.">Face enemies with different behavior patterns, armed with a basic melee attack.</p>
           </li>
           <li class="pillar">
             <svg class="pillar-icon" aria-hidden="true"><use href="#px-key"/></svg>
-            <h4>Solve</h4>
-            <p>Explore dungeons and solve puzzles built around the environment.</p>
+            <h4 data-es="Resuelve">Solve</h4>
+            <p data-es="Explora mazmorras y resuelve puzles construidos en torno al entorno.">Explore dungeons and solve puzzles built around the environment.</p>
           </li>
           <li class="pillar">
             <svg class="pillar-icon" aria-hidden="true"><use href="#px-disc"/></svg>
-            <h4>Use special items</h4>
-            <p>Items that work in combat and for solving puzzles. In our current demo design, it's a frisbee.</p>
+            <h4 data-es="Usa objetos especiales">Use special items</h4>
+            <p data-es="Objetos que sirven en combate y para resolver puzles. En el diseño actual de nuestra demo, es un frisbee.">Items that work in combat and for solving puzzles. In our current demo design, it's a frisbee.</p>
           </li>
         </ul>
 
         <div class="game-foot">
-          <p><svg class="icon-inline" aria-hidden="true"><use href="#px-note"/></svg> Visually, we're aiming for detailed pixel art, tile-based environments and a distinct identity for every faction, with music that reflects each instrument family and region.</p>
-          <p class="note">Everything in this section describes the game's current design. Details may change as development continues.</p>
+          <p data-es="<svg class='icon-inline' aria-hidden='true'><use href='#px-note'/></svg> Visualmente, buscamos un pixel art detallado, entornos basados en tiles y una identidad propia para cada facción, con música que refleje cada familia de instrumentos y región."><svg class="icon-inline" aria-hidden="true"><use href="#px-note"/></svg> Visually, we're aiming for detailed pixel art, tile-based environments and a distinct identity for every faction, with music that reflects each instrument family and region.</p>
+          <p class="note" data-es="Todo lo de esta sección describe el diseño actual del juego. Los detalles pueden cambiar a medida que avance el desarrollo.">Everything in this section describes the game's current design. Details may change as development continues.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section team" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <p class="eyebrow" data-es="Quiénes somos">Who we are</p>
+        <h2 id="team-title" data-es="Conoce al equipo">Meet the team</h2>
+        <ul class="team-list">
+          <li class="team-card">
+            <img class="team-photo" src="assets/fotos%20nosotros/Cesar%20Foto.jpeg" alt="César" width="320" height="320" loading="lazy">
+            <div class="team-text">
+              <h3>César</h3>
+              <p class="team-role" data-es="Programación y arquitectura del juego">Programming and game architecture lead</p>
+              <p data-es="Soy <strong>César</strong>, <strong>desarrollador de videojuegos</strong> y responsable de <strong>programación y arquitectura</strong>, además de estudiante del doble grado en <strong>Diseño y Desarrollo de Videojuegos</strong> e <strong>Ingeniería de Computadores</strong>. Me especializo en <strong>programación</strong> y <strong>diseño de sistemas</strong> aplicados a videojuegos.">I'm <strong>César</strong>, a <strong>game developer</strong> and the lead for <strong>programming and architecture</strong>, as well as a student of the double degree in <strong>Video Game Design and Development</strong> and <strong>Computer Engineering</strong>. I specialize in <strong>programming</strong> and <strong>systems design</strong> applied to video games.</p>
+              <p data-es="También soy <strong>creador de contenido</strong> bajo el nombre de <strong><a href='https://instagram.com/centusdev' target='_blank' rel='noopener noreferrer'>Centus Dev</a></strong> y miembro de la <strong>junta directiva</strong> de <strong><a href='https://instagram.com/virtualsoulurjc' target='_blank' rel='noopener noreferrer'>Virtual Soul</a></strong>, donde hacemos eventos de videojuegos y soy el <strong>coordinador del equipo de comunicación y redes sociales</strong>.">I'm also a <strong>content creator</strong> under the name <strong><a href="https://instagram.com/centusdev" target="_blank" rel="noopener noreferrer">Centus Dev</a></strong> and a member of the <strong>board</strong> of <strong><a href="https://instagram.com/virtualsoulurjc" target="_blank" rel="noopener noreferrer">Virtual Soul</a></strong>, where we run video game events and I'm the <strong>coordinator of the communication and social media team</strong>.</p>
+            </div>
+          </li>
+          <li class="team-card">
+            <img class="team-photo" src="assets/fotos%20nosotros/placeholder.svg" alt="Team member 2" width="320" height="320" loading="lazy">
+            <div class="team-text">
+              <h3 data-es="Miembro 2">Member 2</h3>
+              <p class="team-role" data-es="Rol">Role</p>
+              <p data-es="Texto de presentación de ejemplo. Aquí irá la descripción de este miembro del equipo.">Sample introduction text. This team member's description will go here.</p>
+            </div>
+          </li>
+          <li class="team-card">
+            <img class="team-photo" src="assets/fotos%20nosotros/placeholder.svg" alt="Team member 3" width="320" height="320" loading="lazy">
+            <div class="team-text">
+              <h3 data-es="Miembro 3">Member 3</h3>
+              <p class="team-role" data-es="Rol">Role</p>
+              <p data-es="Texto de presentación de ejemplo. Aquí irá la descripción de este miembro del equipo.">Sample introduction text. This team member's description will go here.</p>
+            </div>
+          </li>
+          <li class="team-card">
+            <img class="team-photo" src="assets/fotos%20nosotros/placeholder.svg" alt="Team member 4" width="320" height="320" loading="lazy">
+            <div class="team-text">
+              <h3 data-es="Miembro 4">Member 4</h3>
+              <p class="team-role" data-es="Rol">Role</p>
+              <p data-es="Texto de presentación de ejemplo. Aquí irá la descripción de este miembro del equipo.">Sample introduction text. This team member's description will go here.</p>
+            </div>
+          </li>
+          <li class="team-card">
+            <img class="team-photo" src="assets/fotos%20nosotros/placeholder.svg" alt="Team member 5" width="320" height="320" loading="lazy">
+            <div class="team-text">
+              <h3 data-es="Miembro 5">Member 5</h3>
+              <p class="team-role" data-es="Rol">Role</p>
+              <p data-es="Texto de presentación de ejemplo. Aquí irá la descripción de este miembro del equipo.">Sample introduction text. This team member's description will go here.</p>
+            </div>
+          </li>
+          <li class="team-card">
+            <img class="team-photo" src="assets/fotos%20nosotros/placeholder.svg" alt="Team member 6" width="320" height="320" loading="lazy">
+            <div class="team-text">
+              <h3 data-es="Miembro 6">Member 6</h3>
+              <p class="team-role" data-es="Rol">Role</p>
+              <p data-es="Texto de presentación de ejemplo. Aquí irá la descripción de este miembro del equipo.">Sample introduction text. This team member's description will go here.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- GOALS -->
+    <section class="section goals" id="goals" aria-labelledby="goals-title">
+      <div class="container">
+        <p class="eyebrow" data-es="Objetivos">Goals</p>
+        <h2 id="goals-title" data-es="Hacia dónde vamos">Where we're heading</h2>
+        <div class="goals-grid">
+          <article class="goal-card">
+            <h3 data-es="Como estudio">As a studio</h3>
+            <ul>
+              <li data-es="Terminar un juego completo trabajando en equipo.">Finish a complete game as a team.</li>
+              <li data-es="Construir un portfolio sólido y una identidad propia.">Build a solid portfolio and an identity of our own.</li>
+              <li data-es="Compartir el desarrollo de forma abierta con nuestra comunidad.">Share development openly with our community.</li>
+            </ul>
+          </article>
+          <article class="goal-card goal-card-alt">
+            <h3 data-es="Con el juego">With the game</h3>
+            <ul>
+              <li data-es="Lanzar un RPG de acción 2D jugable con exploración, mazmorras, combate y puzles.">Release a playable 2D action RPG with exploration, dungeons, combat and puzzles.</li>
+              <li data-es="Dar una identidad visual y musical propia a cada facción de Orquesta.">Give every faction of Orquesta its own visual and musical identity.</li>
+              <li data-es="Publicar una edición física con el mapa de Orquesta.">Publish a physical edition with the map of Orquesta.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEVLOG -->
+    <section class="section devlog" id="devlog" aria-labelledby="devlog-title">
+      <div class="container">
+        <p class="eyebrow" data-es="Devlog">Devlog</p>
+        <h2 id="devlog-title" data-es="Diario de desarrollo">Development diary</h2>
+        <p class="section-lead" data-es="Así avanza el juego, versión a versión.">How the game is progressing, version by version.</p>
+        <ol class="devlog-list">
+          <li class="devlog-entry">
+            <div class="devlog-head">
+              <h3>Beta</h3>
+              <span class="badge" data-es="Entregada">Delivered</span>
+            </div>
+            <p class="devlog-date" data-es="13 de octubre de 2026">October 13, 2026</p>
+            <p data-es="Beta para clase, no una beta real. Incluía sistemas muy simples: movimiento, ataque del personaje, interacción con el entorno y un enemigo básico.">A class beta, not a real one. It included very simple systems: movement, the character's attack, interaction with the environment and one basic enemy.</p>
+          </li>
+          <li class="devlog-entry">
+            <div class="devlog-head">
+              <h3>Alpha</h3>
+              <span class="badge badge-soft" data-es="Próxima entrega">Next delivery</span>
+            </div>
+            <p class="devlog-date" data-es="15 de noviembre de 2026">November 15, 2026</p>
+            <p data-es="Alrededor del <strong>75% del juego</strong>: casi todo el arte hecho, casi todos los sistemas implementados y todo el contenido que recoge el GDD.">Around <strong>75% of the game</strong>: almost all the art done, almost all systems implemented and all the content described in the GDD.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PHYSICAL EDITION -->
+    <section class="section edition" id="edition" aria-labelledby="edition-title">
+      <div class="container">
+        <div class="edition-card">
+          <figure class="edition-art">
+            <img src="assets/img/orquesta-map.svg" alt="Illustration of the physical map of Orquesta included in the physical edition" width="400" height="300" loading="lazy">
+            <figcaption class="edition-tag" data-es="Mapa físico de Orquesta">Physical map of Orquesta</figcaption>
+          </figure>
+          <div class="edition-copy">
+            <p class="eyebrow" data-es="<span class='badge'>Próximamente</span> Edición física"><span class="badge">Coming soon</span> Physical edition</p>
+            <h2 id="edition-title" data-es="Lleva Orquesta a tus manos">Hold Orquesta in your hands</h2>
+            <p data-es="Vamos a lanzar una <strong>edición física</strong> de nuestro juego. Al comprarla, además del juego recibirás un <strong>mapa físico de Orquesta</strong> para explorar su mundo también fuera de la pantalla.">We're planning a <strong>physical edition</strong> of our game. When you buy it, besides the game you'll get a <strong>physical map of Orquesta</strong> so you can explore its world away from the screen.</p>
+            <ul class="edition-list">
+              <li data-es="Copia física del juego">Physical copy of the game</li>
+              <li data-es="Mapa físico de Orquesta">Physical map of Orquesta</li>
+              <li data-es="Caja de coleccionista (por definir)">Collector's box (to be defined)</li>
+            </ul>
+            <div class="edition-buy">
+              <p class="edition-price"><strong>20 €</strong></p>
+              <a class="btn btn-primary" href="#contact" data-es="Quiero la edición física">I want the physical edition</a>
+            </div>
+            <p class="note" data-es="Contenido provisional. La edición física aún no está a la venta.">Content is provisional. The physical edition is not on sale yet.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -227,9 +369,9 @@
     <!-- SOCIALS -->
     <section class="section socials" id="socials" aria-labelledby="socials-title">
       <div class="container">
-        <p class="eyebrow">Socials</p>
-        <h2 id="socials-title">Follow our journey</h2>
-        <p class="section-lead">Keep up with development and see what the pack is working on.</p>
+        <p class="eyebrow" data-es="Redes">Socials</p>
+        <h2 id="socials-title" data-es="Sigue nuestro camino">Follow our journey</h2>
+        <p class="section-lead" data-es="Sigue el desarrollo y mira en qué trabaja la manada.">Keep up with development and see what the pack is working on.</p>
         <ul class="social-grid">
           <li><a class="social-card" href="https://dogseye-studio.itch.io" target="_blank" rel="noopener noreferrer">
             <span class="social-icon"><svg class="icon" aria-hidden="true"><use href="#i-itch"/></svg></span>
@@ -258,7 +400,7 @@
           </a></li>
           <li><a class="social-card" href="https://github.com/DOGSEYE-STUDIO/Time-of-Ocarina" target="_blank" rel="noopener noreferrer">
             <span class="social-icon"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></span>
-            <span class="social-text"><span class="social-name">GitHub</span><span class="social-handle">Game project repository</span></span>
+            <span class="social-text"><span class="social-name">GitHub</span><span class="social-handle" data-es="Repositorio del proyecto del juego">Game project repository</span></span>
             <svg class="social-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a></li>
         </ul>
@@ -270,15 +412,21 @@
       <div class="container">
         <div class="contact-card">
           <svg class="px px-contact" aria-hidden="true"><use href="#px-star"/></svg>
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Say hello!</h2>
-          <p>Questions, collaborations, events, or just want to talk about games? Drop us a line.</p>
+          <p class="eyebrow" data-es="Contacto">Contact</p>
+          <h2 id="contact-title" data-es="¡Di hola!">Say hello!</h2>
+          <p data-es="¿Preguntas, colaboraciones, eventos o simplemente quieres hablar de juegos? Escríbenos.">Questions, collaborations, events, or just want to talk about games? Drop us a line.</p>
+          <form class="contact-form" id="contact-form">
+            <label><span data-es="Nombre">Name</span><input type="text" name="name" required autocomplete="name"></label>
+            <label><span data-es="Tu email">Your email</span><input type="email" name="email" required autocomplete="email"></label>
+            <label><span data-es="Mensaje">Message</span><textarea name="message" rows="4" required></textarea></label>
+            <button class="btn btn-primary" type="submit" data-es="Enviar mensaje">Send message</button>
+          </form>
           <div class="contact-actions">
             <a class="btn btn-primary btn-email" href="mailto:dogseye.studio@gmail.com">
               <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
               dogseye.studio@gmail.com
             </a>
-            <button class="btn btn-secondary copy-btn" type="button" data-copy="dogseye.studio@gmail.com" hidden>Copy email</button>
+            <button class="btn btn-secondary copy-btn" type="button" data-copy="dogseye.studio@gmail.com" hidden data-es="Copiar email">Copy email</button>
             <span class="copy-status" role="status" aria-live="polite"></span>
           </div>
         </div>
@@ -301,7 +449,7 @@
         <li><a href="https://github.com/DOGSEYE-STUDIO/Time-of-Ocarina" target="_blank" rel="noopener noreferrer" aria-label="Dogseye Studio game project on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
         <li><a href="mailto:dogseye.studio@gmail.com" aria-label="Email Dogseye Studio"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
       </ul>
-      <p class="footer-meta">© 2026 Dogseye Studio · Indie game studio in Madrid</p>
+      <p class="footer-meta" data-es="© 2026 Dogseye Studio · Estudio indie de videojuegos en Madrid">© 2026 Dogseye Studio · Indie game studio in Madrid</p>
     </div>
   </footer>
 </body>
