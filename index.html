@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Silkscreen&display=swap">
 
-  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link rel="stylesheet" href="css/styles.css?v=11">
   <link rel="preload" as="image" href="assets/img/logo-full-480.png" imagesrcset="assets/img/logo-full-480.png 480w, assets/img/logo-full.png 720w" imagesizes="(min-width: 960px) 420px, 72vw">
 
   <script type="application/ld+json">
@@ -55,7 +55,7 @@
     ]
   }
   </script>
-  <script src="js/main.js?v=4" defer></script>
+  <script src="js/main.js?v=11" defer></script>
 </head>
 <body>
   <!-- Icon sprite: brand icons from Simple Icons (CC0); pixel icons drawn for this site -->
@@ -100,6 +100,7 @@
           <li><a href="#goals" data-es="Objetivos">Goals</a></li>
           <li><a href="#devlog" data-es="Devlog">Devlog</a></li>
           <li><a href="#edition" data-es="Edición">Edition</a></li>
+          <li><a href="#marketing" data-es="Marketing">Marketing</a></li>
           <li><a href="#socials" data-es="Redes">Socials</a></li>
         </ul>
         <a class="btn btn-small btn-ink" href="#contact" data-es="Contacto">Contact</a>
@@ -174,7 +175,7 @@
           <img class="coda-logo" src="assets/img/coda-logo.jpg" alt="CODA: The Sound of Revolution logo" width="1235" height="754">
           <p class="eyebrow eyebrow-dark" data-es="<span class='badge'>En desarrollo</span> Nuestro juego"><span class="badge">In development</span> Our game</p>
           <h2 id="game-title" data-es="Un mundo que funciona con música">A world that runs on music</h2>
-          <p class="game-lead" data-es="Nuestro proyecto actual es <strong>CODA: The Sound of Revolution</strong>, un RPG de acción 2D con vista cenital centrado en la exploración, las mazmorras, el combate y los puzles. Se inspira en los clásicos <em>The Legend of Zelda</em> y en cómo combinan aventura, combate y puzles basados en el entorno.">Our current project is <strong>CODA: The Sound of Revolution</strong>, a 2D top-down action RPG focused on exploration, dungeon crawling, combat and puzzles. It draws inspiration from the classic <em>The Legend of Zelda</em> games and the way they blend adventure, combat and environmental puzzle-solving.</p>
+          <p class="game-lead" data-es="Nuestro proyecto actual es <strong>CODA: The Sound of Revolution</strong>, un RPG de acción 2D con vista cenital centrado en la exploración, las mazmorras, el combate y los puzles.">Our current project is <strong>CODA: The Sound of Revolution</strong>, a 2D top-down action RPG focused on exploration, dungeon crawling, combat and puzzles.</p>
         </div>
 
         <div class="story">
@@ -203,27 +204,32 @@
 
         <h3 class="pillars-title" data-es="Qué estamos diseñando">What we're designing</h3>
         <ul class="pillars">
-          <li class="pillar">
+          <li class="pillar" tabindex="0" role="button" data-shot="assets/img/game/explore.png" data-es-cap="Salas conectadas por pasadizos: el mundo se descubre a pie." data-en-cap="Rooms linked by passages: the world is discovered on foot.">
             <svg class="pillar-icon" aria-hidden="true"><use href="#px-explore"/></svg>
             <h4 data-es="Explora">Explore</h4>
             <p data-es="Muévete libremente por un mundo cenital e interactúa con personajes, objetos, carteles y mecanismos.">Move freely through a top-down world and interact with characters, objects, signs and mechanisms.</p>
           </li>
-          <li class="pillar">
+          <li class="pillar" tabindex="0" role="button" data-shot="assets/img/game/fight.png" data-es-cap="Enemigos con distintos comportamientos y un ataque cuerpo a cuerpo." data-en-cap="Enemies with different behaviours and a melee attack.">
             <svg class="pillar-icon" aria-hidden="true"><use href="#px-sword"/></svg>
             <h4 data-es="Lucha">Fight</h4>
             <p data-es="Enfréntate a enemigos con distintos patrones de comportamiento, armado con un ataque cuerpo a cuerpo básico.">Face enemies with different behavior patterns, armed with a basic melee attack.</p>
           </li>
-          <li class="pillar">
+          <li class="pillar" tabindex="0" role="button" data-shot="assets/img/game/solve.png" data-es-cap="Puzles de bloques, interruptores y salas con mecanismos." data-en-cap="Block, switch and mechanism puzzles built into each room.">
             <svg class="pillar-icon" aria-hidden="true"><use href="#px-key"/></svg>
             <h4 data-es="Resuelve">Solve</h4>
             <p data-es="Explora mazmorras y resuelve puzles construidos en torno al entorno.">Explore dungeons and solve puzzles built around the environment.</p>
           </li>
-          <li class="pillar">
+          <li class="pillar" tabindex="0" role="button" data-shot="assets/img/game/items.png" data-es-cap="Llaves, puertas y objetos que abren nuevos caminos." data-en-cap="Keys, doors and objects that open new paths.">
             <svg class="pillar-icon" aria-hidden="true"><use href="#px-disc"/></svg>
             <h4 data-es="Usa objetos especiales">Use special items</h4>
             <p data-es="Objetos que sirven en combate y para resolver puzles. En el diseño actual de nuestra demo, es un frisbee.">Items that work in combat and for solving puzzles. In our current demo design, it's a frisbee.</p>
           </li>
         </ul>
+
+        <figure class="game-shot">
+          <img src="assets/img/game/explore.png" alt="CODA gameplay" width="1559" height="1030" loading="lazy">
+          <figcaption data-es="Haz clic en cada apartado para ver el juego en acción.">Click each item above to see the game in action.</figcaption>
+        </figure>
 
         <div class="game-foot">
           <p data-es="<svg class='icon-inline' aria-hidden='true'><use href='#px-note'/></svg> Visualmente, buscamos un pixel art detallado, entornos basados en tiles y una identidad propia para cada facción, con música que refleje cada familia de instrumentos y región."><svg class="icon-inline" aria-hidden="true"><use href="#px-note"/></svg> Visually, we're aiming for detailed pixel art, tile-based environments and a distinct identity for every faction, with music that reflects each instrument family and region.</p>
@@ -239,7 +245,7 @@
         <h2 id="team-title" data-es="Conoce al equipo">Meet the team</h2>
         <ul class="team-list">
           <li class="team-card">
-            <img class="team-photo" src="assets/fotos%20nosotros/Cesar%20Foto.jpeg" alt="César" width="320" height="320" loading="lazy">
+            <img class="team-photo" src="assets/fotos%20nosotros/Cesar.jpg" alt="César" width="320" height="320" loading="lazy">
             <div class="team-text">
               <h3>César</h3>
               <p class="team-role" data-es="Programación y arquitectura del juego">Programming and game architecture lead</p>
@@ -248,35 +254,37 @@
             </div>
           </li>
           <li class="team-card">
-            <img class="team-photo" src="assets/fotos%20nosotros/placeholder.svg" alt="Team member 2" width="320" height="320" loading="lazy">
+            <img class="team-photo" src="assets/fotos%20nosotros/Iris.jpg" alt="Iris" width="320" height="320" loading="lazy">
             <div class="team-text">
-              <h3 data-es="Miembro 2">Member 2</h3>
-              <p class="team-role" data-es="Rol">Role</p>
-              <p data-es="Texto de presentación de ejemplo. Aquí irá la descripción de este miembro del equipo.">Sample introduction text. This team member's description will go here.</p>
+              <h3>Iris</h3>
+              <p class="team-role" data-es="Responsable de arte y narrativa">Art and narrative lead</p>
+              <p data-es="Soy <strong>Iris</strong>, <strong>desarrolladora</strong> y responsable de <strong>arte y narrativa</strong> en el proyecto. Estudio <strong>Diseño y Desarrollo de Videojuegos</strong>, especializándome en <strong>arte 2D</strong>, <strong>diseño de personajes</strong> y <strong>storytelling</strong>.">I'm <strong>Iris</strong>, a <strong>developer</strong> and the <strong>art and narrative</strong> lead on the project. I study <strong>Video Game Design and Development</strong>, specializing in <strong>2D art</strong>, <strong>character design</strong> and <strong>storytelling</strong>.</p>
+              <p data-es="Comparto mi arte y contenido en redes bajo el nombre de <strong><a href='https://linktr.ee/genakyr' target='_blank' rel='noopener noreferrer'>genakyr</a></strong>, y puedes explorar más proyectos en los que he trabajado en mi perfil de <strong><a href='https://itch.io/profile/genakyr' target='_blank' rel='noopener noreferrer'>itch.io</a></strong>.">I share my art and content on social media under the name <strong><a href="https://linktr.ee/genakyr" target="_blank" rel="noopener noreferrer">genakyr</a></strong>, and you can explore more projects I've worked on in my <strong><a href="https://itch.io/profile/genakyr" target="_blank" rel="noopener noreferrer">itch.io</a></strong> profile.</p>
             </div>
           </li>
           <li class="team-card">
-            <img class="team-photo" src="assets/fotos%20nosotros/placeholder.svg" alt="Team member 3" width="320" height="320" loading="lazy">
+            <img class="team-photo" src="assets/fotos%20nosotros/Marta.jpg" alt="Marta" width="320" height="320" loading="lazy">
             <div class="team-text">
-              <h3 data-es="Miembro 3">Member 3</h3>
-              <p class="team-role" data-es="Rol">Role</p>
-              <p data-es="Texto de presentación de ejemplo. Aquí irá la descripción de este miembro del equipo.">Sample introduction text. This team member's description will go here.</p>
+              <h3>Marta</h3>
+              <p class="team-role" data-es="Desarrolladora y artista 2D">Developer and 2D artist</p>
+              <p data-es="Soy <strong>Marta</strong>, <strong>desarrolladora de videojuegos</strong> y <strong>artista 2D</strong>. Estudio <strong>Diseño y Desarrollo de Videojuegos</strong> en la <strong>URJC</strong>. Me especializo principalmente en <strong>arte 2D</strong>, <strong>diseño de personajes</strong> y <strong>entornos</strong>.">I'm <strong>Marta</strong>, a <strong>game developer</strong> and <strong>2D artist</strong>. I study <strong>Video Game Design and Development</strong> at <strong>URJC</strong>. I mainly specialize in <strong>2D art</strong>, <strong>character design</strong> and <strong>environments</strong>.</p>
+              <p data-es="He realizado varios <strong>proyectos universitarios</strong> y participado en varias <strong>Jams</strong>, donde he podido experimentar también con roles de <strong>programación</strong>. Todo esto está en mi <strong><a href='https://mr-sae.itch.io/' target='_blank' rel='noopener noreferrer'>itch.io</a></strong>.">I've worked on several <strong>university projects</strong> and taken part in several <strong>game jams</strong>, where I've also been able to experiment with <strong>programming</strong> roles. All of this is on my <strong><a href="https://mr-sae.itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a></strong>.</p>
             </div>
           </li>
           <li class="team-card">
-            <img class="team-photo" src="assets/fotos%20nosotros/placeholder.svg" alt="Team member 4" width="320" height="320" loading="lazy">
+            <img class="team-photo" src="assets/fotos%20nosotros/Daniel.jpg" alt="Daniel" width="320" height="320" loading="lazy">
             <div class="team-text">
-              <h3 data-es="Miembro 4">Member 4</h3>
-              <p class="team-role" data-es="Rol">Role</p>
-              <p data-es="Texto de presentación de ejemplo. Aquí irá la descripción de este miembro del equipo.">Sample introduction text. This team member's description will go here.</p>
+              <h3>Daniel</h3>
+              <p class="team-role" data-es="Arte conceptual y final">Concept and final art</p>
+              <p data-es="Soy Daniel, <strong>desarrollador de videojuegos y artista</strong>, además de estudiante de <strong>Diseño y Desarrollo de Videojuegos</strong>. Me encargo de parte del <strong>pixel art y concept art</strong> del proyecto.">I'm Daniel, a <strong>game developer and artist</strong>, and a <strong>Game Design and Development</strong> student. I take care of part of the project's <strong>pixel art and concept art</strong>.</p>
             </div>
-          </li>
+</li>
           <li class="team-card">
-            <img class="team-photo" src="assets/fotos%20nosotros/placeholder.svg" alt="Team member 5" width="320" height="320" loading="lazy">
+            <img class="team-photo" src="assets/fotos%20nosotros/Victor.jpg" alt="Víctor" width="320" height="320" loading="lazy">
             <div class="team-text">
-              <h3 data-es="Miembro 5">Member 5</h3>
-              <p class="team-role" data-es="Rol">Role</p>
-              <p data-es="Texto de presentación de ejemplo. Aquí irá la descripción de este miembro del equipo.">Sample introduction text. This team member's description will go here.</p>
+              <h3>Víctor</h3>
+              <p class="team-role" data-es="Programación y audio">Programming and audio</p>
+              <p data-es="¡Buenas! Soy Víctor (también conocido como <strong>Victsantgt</strong>), un estudiante de videojuegos que se especializa en <strong>programación</strong> (Technical Game Design y Gameplay Programming) y <strong>audio</strong> (composición, diseño e implementación). ¡Podéis conocer más de mí en mi <a href='https://victsantgt.github.io/victsantgt/' target='_blank' rel='noopener noreferrer'>portfolio</a>!">Hi! I'm Víctor (also known as <strong>Victsantgt</strong>), a game student specializing in <strong>programming</strong> (Technical Game Design and Gameplay Programming) and <strong>audio</strong> (composition, design and implementation). You can find out more about me in my <a href="https://victsantgt.github.io/victsantgt/" target="_blank" rel="noopener noreferrer">portfolio</a>!</p>
             </div>
           </li>
           <li class="team-card">
@@ -368,6 +376,16 @@
             <p class="note" data-es="Contenido provisional. La edición física aún no está a la venta.">Content is provisional. The physical edition is not on sale yet.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- MARKETING -->
+    <section class="section marketing" id="marketing" aria-labelledby="marketing-title">
+      <div class="container">
+        <p class="eyebrow" data-es="Marketing">Marketing</p>
+        <h2 id="marketing-title" data-es="Nuestras inspiraciones">Our inspirations</h2>
+        <p class="marketing-lead" data-es="<strong>CODA: The Sound of Revolution</strong> se inspira en los clásicos <em>The Legend of Zelda</em> y en cómo combinan aventura, combate y puzles basados en el entorno, pero con una identidad propia: un mundo que funciona con música.">
+          <strong>CODA: The Sound of Revolution</strong> draws inspiration from the classic <em>The Legend of Zelda</em> games and the way they blend adventure, combat and environmental puzzle-solving, but with an identity of its own: a world that runs on music.</p>
       </div>
     </section>
 

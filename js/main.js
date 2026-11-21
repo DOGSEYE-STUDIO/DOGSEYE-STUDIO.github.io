@@ -49,6 +49,22 @@
     langBtn.setAttribute('data-lang', 'en');
     if (saved === 'es') setLang('es');
 
+    // Game screenshots: clicking a pillar shows its image
+    var shot = document.querySelector('.game-shot');
+    var pillars = document.querySelectorAll('.pillar[data-shot]');
+    function showShot(p) {
+      shot.querySelector('img').src = p.getAttribute('data-shot');
+      var cap = shot.querySelector('figcaption');
+      cap.setAttribute('data-es', p.getAttribute('data-es-cap'));
+      cap.setAttribute('data-en', p.getAttribute('data-en-cap'));
+      cap.textContent = p.getAttribute(root.lang === 'es' ? 'data-es-cap' : 'data-en-cap');
+      Array.prototype.forEach.call(pillars, function (q) { q.classList.toggle('is-active', q === p); });
+    }
+    Array.prototype.forEach.call(pillars, function (p) {
+      p.addEventListener('click', function () { showShot(p); });
+      p.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showShot(p); } });
+    });
+
     // Header border once the page scrolls
     function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 8); }
     onScroll();

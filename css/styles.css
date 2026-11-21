@@ -916,3 +916,11 @@ display: none;
   box-shadow: 6px 6px 0 var(--purple);
 }
 .game-lead strong { color: var(--on-night); }
+
+/* Game screenshots */
+.pillar[data-shot] { cursor: pointer; }
+.pillar.is-active { border-color: var(--magenta); }
+.game-shot { margin: var(--s-6) 0 0; text-align: center; }
+.game-shot img { width: 100%; max-width: 760px; height: auto; border: 3px solid var(--purple-light); border-radius: 12px; image-rendering: pixelated; }
+.game-shot figcaption { margin-top: var(--s-3); color: var(--on-night-soft); font-size: .975rem; }
+.marketing-lead { max-width: 60ch; }
