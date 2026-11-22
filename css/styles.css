@@ -920,7 +920,8 @@ display: none;
 /* Game screenshots */
 .pillar[data-shot] { cursor: pointer; }
 .pillar.is-active { border-color: var(--magenta); }
-.game-shot { margin: var(--s-6) 0 0; text-align: center; }
+.game-shot { margin: var(--s-6) auto 0; max-width: 760px; text-align: center; }
 .game-shot img { width: 100%; max-width: 760px; height: auto; border: 3px solid var(--purple-light); border-radius: 12px; image-rendering: pixelated; }
 .game-shot figcaption { margin-top: var(--s-3); color: var(--on-night-soft); font-size: .975rem; }
+.game-shot + .game-foot { margin-top: var(--s-8); }
 .marketing-lead { max-width: 60ch; }
