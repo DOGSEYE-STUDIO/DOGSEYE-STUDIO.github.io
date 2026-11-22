@@ -925,3 +925,9 @@ display: none;
 .game-shot figcaption { margin-top: var(--s-3); color: var(--on-night-soft); font-size: .975rem; }
 .game-shot + .game-foot { margin-top: var(--s-8); }
 .marketing-lead { max-width: 60ch; }
+.marketing-inner { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-6); align-items: center; }
+.inspo-grid { max-width: 520px; justify-self: end; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3); }
+.inspo-card { margin: 0; font-size: .85rem; color: var(--ink-soft); text-align: center; }
+.inspo-img { aspect-ratio: 4 / 3; border: 3px solid var(--ink); border-radius: 10px; background: var(--paper-2); margin-bottom: var(--s-2); overflow: hidden; }
+.inspo-img img { width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; display: block; }
+@media (max-width: 760px) { .marketing-inner { grid-template-columns: 1fr; } }
